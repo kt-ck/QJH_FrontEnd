@@ -3,12 +3,7 @@ self.addEventListener("install", (e) => {
     caches
       .open("application-store")
       .then((cache) =>
-        cache.addAll([
-          "/application/",
-          "/application/index.html",
-          "/application/index.js",
-          "/application/static/images/beast.png",
-        ])
+        cache.addAll(["index.html", "index.js", "static/images/beast.png"])
       )
   );
 });
